@@ -1,0 +1,13 @@
+/* .card-modal{
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+.no-cards p{
+  color:#fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}

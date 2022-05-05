@@ -1,0 +1,32 @@
+
+.card a{
+  height: 6.25rem; /*altura*/
+  width: 45rem; /*largura*/
+
+  background: #f4b77e; /*cor de fundo*/
+  color: #fff; /*cor da fonte*/
+
+  border-radius: 10px; /*arredondar bordas*/
+
+  margin-bottom: 1.25rem; /*margem abaixo, para nao ficarem colados*/
+
+  display: flex; /*display flex ara centralizar*/
+  align-items: center; /*centralizar na vertical*/
+  justify-content: space-between; /*separar conteudo nos cantos*/
+  padding: 1.5rem; /*espaçamento interior*/
+  
+  font-size: 1.4rem;
+
+  position: relative;
+}
+
+.card span{
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+.card a:hover>span{
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
