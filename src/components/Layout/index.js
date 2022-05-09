@@ -6,10 +6,12 @@ function LayoutComponent({ children }) {
     <div className="container">
       <header>
         <div className="header">
-          <img
-            src="https://assets1.mtggoldfish.com/assets/mtggoldfish-website-logo-0a6f6c08669df80f2a1dbc60d365bd090d712b5106927ad5cf7efc3e3449fcfe.png"
-            alt="Logo"
-          ></img>
+          <a href="/">
+            <img
+              src="https://assets1.mtggoldfish.com/assets/mtggoldfish-website-logo-0a6f6c08669df80f2a1dbc60d365bd090d712b5106927ad5cf7efc3e3449fcfe.png"
+              alt="Logo"
+            ></img>
+          </a>
           <div className="navBar">
             <input
               type="text"

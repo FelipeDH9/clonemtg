@@ -19,6 +19,65 @@
   color: #fff;
   cursor: pointer;
 }
+#cardList{
+  border-spacing: 0px;
+  max-width: 1500px;
+  
+}
+
+#cardList td,
+#cardList th {
+  border: 0px solid #ddd;
+  border-bottom: 1px solid #444444;
+  padding: .3rem;
+  height: 1.6rem;
+  /* text-align: left; */
+  line-height: 22.5px;
+  /* font css */
+  font-size: 15px;
+  color: #fff;
+}
+
+#cardList tr:nth-child(even) {
+  background-color: #303030;
+}
+
+#cardList tbody tr a{
+  cursor: pointer;
+  text-decoration: none;
+  color:#6fb7e7
+}
+
+#cardList tbody tr a:hover{
+  text-decoration:underline;
+}
+
+.tooltip{
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltipimage {
+  visibility: hidden;
+  width: auto;
+  background-color: #303030;
+  color: #fff;
+  text-align: center;
+  padding: 3px 3px;
+  border-radius: 6px;
+  border:1px solid #222;
+  position: absolute;
+  z-index: 1;
+
+  top: -145px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltipimage {
+  visibility: visible;
+}
+
 
 /* @media (min-width: 1200px){
 
