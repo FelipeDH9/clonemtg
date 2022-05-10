@@ -8,8 +8,8 @@ function Card() {
   return (
     <div>
       <div className="titles">
-        <h3 id="card-name">NOME DA CARTA</h3>
-        <h3>SET DA CARTA</h3>
+        <h3 id="card-name">Abbot of Keral Keep</h3>
+        <h3>Magic Origins</h3>
       </div>
       <div className="card-info">
         {/*BLOCAO COM CARTA E TEXTO*/}
@@ -20,8 +20,10 @@ function Card() {
         </div>
         <div className="card-info-box">
           <div className="info-box">
-            <h3>Abbot of Keral Keep</h3>
-            {/* <span>CUSTO DE MANA</span> */}
+            <div className="name-cost">
+              <h3>Abbot of Keral Keep</h3>
+              <span>{'1 {R}'}</span>
+            </div>
             <p>Creature — Human Monk</p>
             <p>
               Prowess (Whenever you cast a noncreature spell, this creature gets

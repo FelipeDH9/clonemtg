@@ -19,6 +19,7 @@ function Home() {
   const fullCurrentCards = () => {
     setCurrentCard(allCards)
     setNoCards(false)
+    console.log(allCards)
   }
 
   useEffect(() => {
