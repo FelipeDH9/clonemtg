@@ -27,8 +27,8 @@ color: #fff;
 }
 
 .card-image-butons img{
-  height: 369.875px;
-  width: auto;
+  height: auto;
+  width: 265px;
   margin-bottom: 7.5px;
   border-radius: 1rem;
   box-shadow: 1px 1px 8px rgb(0 0 0 / 35%);
@@ -112,4 +112,47 @@ color: #fff;
   font-size: 75%;
   line-height: 16.875px;
   text-align: right;
+}
+
+@media (max-width: 1200px){
+  .card-info{
+    display: block;
+    max-width: 100%;
+  }
+
+  .titles {
+    content: "";
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .card-image-butons {
+    margin-right: 0;
+    display: flex;
+  }
+
+  .card-image-butons img{
+    height: auto;
+    width: 100%;
+    border-radius: 60px;
+  }
+  
+}
+
+
+@media (min-width: 992){
+  .card-image-butons img{
+    border-radius: 50px;
+  } 
+}
+
+@media (max-width: 767px){
+  .card-image-butons img{
+    border-radius: 40px;
+  }
 }

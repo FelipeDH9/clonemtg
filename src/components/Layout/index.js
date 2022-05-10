@@ -13,15 +13,17 @@ function LayoutComponent({ children }) {
             ></img>
           </a>
           <div className="navBar">
-            <input
-              type="text"
-              placeholder="Digite o nome da carta..."
-              autoFocus="autofocus"
-            ></input>
+            <form>
+              <input
+                type="text"
+                placeholder="Digite o nome da carta..."
+                autoFocus="autofocus"
+              ></input>
 
-            <button onClick={() => {}}>
-              <GoSearch />
-            </button>
+              <button onClick={() => {}}>
+                <GoSearch />
+              </button>
+            </form>
           </div>
         </div>
       </header>

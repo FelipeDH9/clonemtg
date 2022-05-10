@@ -50,10 +50,18 @@ function Home() {
               return (
                 <tr key={card.id}>
                   <td>
-                    <a href={`/card/${card.id}`} className="tooltip">
-                      {card.name}
-                      <img className="tooltipimage" src={card.imageUrl}></img>
-                    </a>
+                    {card.imageUrl ? (
+                      <a href={`/card/${card.id}`} className="tooltip">
+                        {card.name}
+                        <img
+                          className="tooltipimage"
+                          src={card.imageUrl}
+                          alt="card"
+                        ></img>
+                      </a>
+                    ) : (
+                      <p>{card.name}</p>
+                    )}
                   </td>
                   <td>{card.manaCost}</td>
                   <td>{card.type}</td>

@@ -24,6 +24,9 @@
     margin-right: 2rem;
   }
   
+  header form {
+    display: flex;
+  }
   header .navBar{
     height: 36.5px;
   }
@@ -86,13 +89,38 @@
     margin: 0 auto;
   }
   
-  @media (min-width: 1200px){
-  }
-  
-  @media (min-width: 992){
-    
-  }
-  
-  @media (min-width: 767){
-  }
+  @media (max-width: 1200px){
+    header {
+      background:  #ee9746;
+    }
 
+    header img{
+     content: url('https://assets1.mtggoldfish.com/assets/mtggoldfish-mobile-nav-icon-d820c9153a006c980d7b1cfd038543fe2d6987ea60e58c72af950e42f7446cab.png');
+     width: 35px;
+     height: 35px;
+     margin-left: 3.5px;
+     margin-right: 0;
+    }
+  
+    header .navBar {
+      width: 100%;
+    }
+    
+    header .navBar form{
+      margin: 0 1rem;
+      /* width: 100%; */
+    }
+
+    header .navBar{
+      width: 100%;      
+    }
+
+    header .navBar input{
+      width: 100%;
+    }
+
+    header .navBar button{
+      margin-right: 0;
+    }
+  }
+  

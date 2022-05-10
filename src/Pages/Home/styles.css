@@ -19,6 +19,7 @@
   color: #fff;
   cursor: pointer;
 }
+
 #cardList{
   border-spacing: 0px;
   max-width: 1500px;
@@ -85,14 +86,14 @@ h3{
 }
 
 
-/* @media (min-width: 1200px){
+/* @media (max-width: 1200px){
 
-}
+} */
 
-@media (min-width: 992){
+/* @media (min-width: 992){
 
-}
+} */
 
-@media (min-width: 767){
+/* @media (min-width: 767){
 
 } */
