@@ -1,50 +1,61 @@
 import './styles.css'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { getCard } from '../../services/magic'
 
 function Card() {
   const { id } = useParams()
-  console.log('id ----->', id)
+  const [cardById, setCardById] = useState()
+
+  async function teste2() {
+    const res = await getCard(id)
+    const data = await res.data.card
+    setCardById(data)
+  }
+
+  useEffect(() => {
+    teste2()
+  }, [])
 
   return (
-    <div>
-      <div className="titles">
-        <h3 id="card-name">Abbot of Keral Keep</h3>
-        <h3>Magic Origins</h3>
-      </div>
-      <div className="card-info">
-        {/*BLOCAO COM CARTA E TEXTO*/}
-        <div className="card-image-butons">
-          <img src="https://cdn1.mtggoldfish.com/images/h/Abbot-of-Keral-Keep-ORI-672.jpg"></img>
-          <button>Add to collection</button>
-          <button>Create price Alert</button>
+    cardById && (
+      <div>
+        <div className="titles">
+          <h3 id="card-name">{cardById.name}</h3>
+          <h3>{cardById.setName}</h3>
         </div>
-        <div className="card-info-box">
-          <div className="info-box">
-            <div className="name-cost">
-              <h3>Abbot of Keral Keep</h3>
-              <span>{'1 {R}'}</span>
-            </div>
-            <p>Creature — Human Monk</p>
-            <p>
-              Prowess (Whenever you cast a noncreature spell, this creature gets
-              +1/+1 until end of turn.) When Abbot of Keral Keep enters the
-              battlefield, exile the top card of your library. Until end of
-              turn, you may play that card.
-            </p>
-            <div className="rarity-power">
-              <div>Rare</div>
-              <div>
-                <strong>2 / 1</strong>
+        <div className="card-info">
+          <div className="card-image-butons">
+            <img src={cardById.imageUrl} alt="card"></img>
+            <button>Add to collection</button>
+            <button>Create price Alert</button>
+          </div>
+          <div className="card-info-box">
+            <div className="info-box">
+              <div className="name-cost">
+                <h3>{cardById.name}</h3>
+                <span>{cardById.manaCost}</span>
               </div>
-            </div>
-            <div className="artist">
-              #127 Illustrated by Deruchenko Alexander
+              <p>{cardById.type}</p>
+              <p>{cardById.text}</p>
+              <div className="rarity-power">
+                <div>{cardById.rarity}</div>
+                <div>
+                  {cardById.power && (
+                    <strong>
+                      {cardById.power} / {cardById.toughness}
+                    </strong>
+                  )}
+                </div>
+              </div>
+              <div className="artist">
+                #{cardById.number} Illustrated by {cardById.artist}
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <h3>Card Id = {id}</h3>
-    </div>
+    )
   )
 }
 
