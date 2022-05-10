@@ -69,6 +69,7 @@
   border:1px solid #222;
   position: absolute;
   z-index: 1;
+  border-radius: 1rem;
 
   top: -145px;
   left: 105%;
