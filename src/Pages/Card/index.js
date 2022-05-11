@@ -7,14 +7,14 @@ function Card() {
   const { id } = useParams()
   const [cardById, setCardById] = useState()
 
-  async function teste2() {
+  async function getCardById() {
     const res = await getCard(id)
     const data = await res.data.card
     setCardById(data)
   }
 
   useEffect(() => {
-    teste2()
+    getCardById()
   }, [])
 
   return (

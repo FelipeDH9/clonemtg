@@ -30,7 +30,7 @@ color: #fff;
   height: auto;
   width: 265px;
   margin-bottom: 7.5px;
-  border-radius: 1rem;
+  border-radius: 6%;
   box-shadow: 1px 1px 8px rgb(0 0 0 / 35%);
 
 }
@@ -139,20 +139,9 @@ color: #fff;
   .card-image-butons img{
     height: auto;
     width: 100%;
-    border-radius: 60px;
+    border-radius: 6%;
   }
   
 }
 
 
-@media (min-width: 992){
-  .card-image-butons img{
-    border-radius: 50px;
-  } 
-}
-
-@media (max-width: 767px){
-  .card-image-butons img{
-    border-radius: 40px;
-  }
-}

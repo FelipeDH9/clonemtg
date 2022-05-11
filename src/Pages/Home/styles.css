@@ -23,7 +23,7 @@
 #cardList{
   border-spacing: 0px;
   max-width: 1500px;
-  
+  width: 100%;
 }
 
 #cardList td,
@@ -32,12 +32,20 @@
   border-bottom: 1px solid #444444;
   padding: .3rem;
   height: 1.6rem;
-  /* text-align: left; */
+
   line-height: 22.5px;
-  /* font css */
+  text-align: left;
   font-size: 15px;
   color: #fff;
 }
+
+/* #cardList #card-td {
+  width: auto;
+}
+
+#cardList #set-td {
+  width: auto;
+} */
 
 #cardList tr:nth-child(even) {
   background-color: #303030;
@@ -53,15 +61,17 @@
   text-decoration:underline;
 }
 
+
+.body-home h3{
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
 .tooltip{
   position: relative;
   display: inline-block;
   /* border-bottom: 1px dotted black; */
-}
-
-h3{
-  font-size: 1.8rem;
-  color: #fff;
 }
 
 .tooltip .tooltipimage {

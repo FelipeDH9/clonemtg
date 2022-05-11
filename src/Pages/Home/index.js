@@ -27,7 +27,7 @@ function Home() {
   }, [])
 
   return (
-    <div>
+    <div className="body-home">
       <div className="buttons-nav">
         <button className="button" onClick={fullCurrentCards}>
           Mostrar todas as cartas
@@ -40,11 +40,11 @@ function Home() {
         <table id="cardList">
           <tbody>
             <tr>
-              <th>Carta</th>
-              <th>Custo de mana</th>
-              <th>Tipo</th>
+              {/* <th>Carta</th>
+              <th>Set</th> */}
+              {/* <th>Tipo</th>
               <th>Texto</th>
-              <th>Poder / Resistência</th>
+              <th>Poder / Resistência</th> */}
             </tr>
             {currentCard?.map(card => {
               return (
@@ -63,8 +63,8 @@ function Home() {
                       <p>{card.name}</p>
                     )}
                   </td>
-                  <td>{card.manaCost}</td>
-                  <td>{card.type}</td>
+                  <td>{card.setName}</td>
+                  {/* <td>{card.type}</td>
                   <td>{card.text}</td>
                   {card.power ? (
                     <td>
@@ -72,7 +72,7 @@ function Home() {
                     </td>
                   ) : (
                     <td>Não possui</td>
-                  )}
+                  )} */}
                 </tr>
               )
             })}
