@@ -35,8 +35,8 @@ function LayoutComponent({ children }) {
       <div className="layout-bottom">
         <div className="layout-bottom-content">
           <div className="bottom-social">
-            <h3>Contato</h3>
             <div className="bottom-icons">
+              <h3>Contato</h3>
               <a
                 href="https://github.com/FelipeDH9"
                 target="_blank"
@@ -63,7 +63,7 @@ function LayoutComponent({ children }) {
               </a>
             </div>
           </div>
-          <div className="bottom-links">
+          {/* <div className="bottom-links">
             <h3>Tecnologias usadas</h3>
             <ul>
               <li>
@@ -121,12 +121,12 @@ function LayoutComponent({ children }) {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div id="footer-message">
+      {/* <div id="footer-message">
         <p>Site recriado com React para fins educativos.</p>
-      </div>
+      </div> */}
     </div>
   )
 }
