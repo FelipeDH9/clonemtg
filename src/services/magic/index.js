@@ -16,11 +16,11 @@ const doRequest = async ({ method = 'GET', body, headers, params, path }) => {
 }
 
 export const getCards = async params => {
-  const hasParams = params ? { params } : {}
+  const hasParams = params ? { ...params } : {}
   const cards = await doRequest({
     method: 'GET',
     path: '/cards',
-    ...hasParams
+    params: hasParams
   })
   return cards
 }

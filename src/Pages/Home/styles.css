@@ -1,16 +1,30 @@
-.buttons-nav {
-  display: flex;
-  margin: 10px 0;
+.body-home .search{
+  width: 100%;
+  max-width: 1500px;
+  margin-bottom: 1.5rem ;
 }
 
-.button{
+.body-home .search input{
   padding: 0.375rem 0.75rem;
-  margin-right: 10px;
+  font-weight: 400;
+  font-size: .9375rem;
+  line-height: 1.5;
+  width: 100%;
+
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.body-home .search .button{
+  padding: 0.375rem 0.75rem;
   font-weight: 400;
   text-align: center;
   font-size: .9375rem;
   line-height: 1.5;
 
+  width: 5rem;
   border-radius: 0.25rem;
   border: 1px solid transparent;
 
@@ -18,6 +32,18 @@
   border-color:#375a7f;
   color: #fff;
   cursor: pointer;
+
+  transform: filter 0.2s;
+}
+
+.body-home .search .button:hover{
+  filter: brightness(0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  
+}
+
+.body-home .search input:focus, .body-home .search input:hover{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
 }
 
 #cardList{

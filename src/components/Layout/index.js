@@ -1,5 +1,4 @@
 import './styles.css'
-import { GoSearch } from 'react-icons/go'
 import { GrLinkedinOption } from 'react-icons/gr'
 import { VscGithub } from 'react-icons/vsc'
 import { MdEmail } from 'react-icons/md'
@@ -16,7 +15,7 @@ function LayoutComponent({ children }) {
               alt="Logo"
             ></img>
           </a>
-          <div className="navBar">
+          {/* <div className="navBar">
             <form>
               <input
                 type="text"
@@ -28,7 +27,7 @@ function LayoutComponent({ children }) {
                 <GoSearch />
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </header>
       <main>{children}</main>

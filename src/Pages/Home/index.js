@@ -1,25 +1,24 @@
 import { useState, useEffect } from 'react'
-import NoCards from '../../components/NoCards'
+// import NoCards from '../../components/NoCards'
 import { getCards } from '../../services/magic/index'
+import { GoSearch } from 'react-icons/go'
+
 import './styles.css'
 
 function Home() {
   const [allCards, setAllCards] = useState()
   const [currentCard, setCurrentCard] = useState()
-  const [noCards, setNoCards] = useState(false)
+  const [cardName, setCardName] = useState()
+  // const [noCards, setNoCards] = useState(false)
 
   async function fetchData() {
     //função que busca cartas pelos serviços de api do magic.assets
-    const { data } = await getCards() //busca a API pela URL
+    const { data } = await getCards({ name: cardName }) //busca a API pela URL
+    console.log('chamou', data)
     if (data) {
       setAllCards(data.cards) //armazena o data.cards no estado allCards (), pois queremos a propriedade cards que esta em data
+      setCurrentCard(data.cards)
     }
-  }
-
-  const fullCurrentCards = () => {
-    setCurrentCard(allCards)
-    setNoCards(false)
-    console.log(allCards)
   }
 
   useEffect(() => {
@@ -28,57 +27,46 @@ function Home() {
 
   return (
     <div className="body-home">
-      <div className="buttons-nav">
-        <button className="button" onClick={fullCurrentCards}>
-          Mostrar todas as cartas
+      <h3>Pesquisa</h3>
+      <div className="search">
+        <input
+          type="text"
+          placeholder="Digite o nome da carta..."
+          autoFocus="autofocus"
+          onChange={value => setCardName(value.target.value)}
+          onSubmit={() => fetchData()}
+        ></input>
+
+        <button className="button" onClick={() => fetchData()}>
+          <GoSearch />
         </button>
       </div>
 
-      <h3>Pesquisa</h3>
-      {noCards && <NoCards />}
-      {!noCards && (
-        <table id="cardList">
-          <tbody>
-            <tr>
-              {/* <th>Carta</th>
-              <th>Set</th> */}
-              {/* <th>Tipo</th>
-              <th>Texto</th>
-              <th>Poder / Resistência</th> */}
-            </tr>
-            {currentCard?.map(card => {
-              return (
-                <tr key={card.id}>
-                  <td>
-                    {card.imageUrl ? (
-                      <a href={`/card/${card.id}`} className="tooltip">
-                        {card.name}
-                        <img
-                          className="tooltipimage"
-                          src={card.imageUrl}
-                          alt="card"
-                        ></img>
-                      </a>
-                    ) : (
-                      <p>{card.name}</p>
-                    )}
-                  </td>
-                  <td>{card.setName}</td>
-                  {/* <td>{card.type}</td>
-                  <td>{card.text}</td>
-                  {card.power ? (
-                    <td>
-                      {card.power}/{card.toughness}
-                    </td>
+      <table id="cardList">
+        <tbody>
+          {currentCard?.map(card => {
+            return (
+              <tr key={card.id}>
+                <td>
+                  {card.imageUrl ? (
+                    <a href={`/card/${card.id}`} className="tooltip">
+                      {card.name}
+                      <img
+                        className="tooltipimage"
+                        src={card.imageUrl}
+                        alt="card"
+                      ></img>
+                    </a>
                   ) : (
-                    <td>Não possui</td>
-                  )} */}
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
-      )}
+                    <p>{card.name}</p>
+                  )}
+                </td>
+                <td>{card.setName}</td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     </div>
   )
 }
