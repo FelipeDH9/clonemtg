@@ -114,6 +114,20 @@ color: #fff;
   text-align: right;
 }
 
+.info-box #rules-title{
+  border-bottom: 0px;
+  margin: 0;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.info-box .rulings p{
+  font-size: 0.9rem;
+  border: none;
+  border-bottom: none;
+  line-height: 20px;
+}
+
 @media (max-width: 1200px){
   .card-info{
     display: block;

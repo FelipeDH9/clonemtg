@@ -15,22 +15,11 @@ function LayoutComponent({ children }) {
               alt="Logo"
             ></img>
           </a>
-          {/* <div className="navBar">
-            <form>
-              <input
-                type="text"
-                placeholder="Digite o nome da carta..."
-                autoFocus="autofocus"
-              ></input>
-
-              <button onClick={() => {}}>
-                <GoSearch />
-              </button>
-            </form>
-          </div> */}
         </div>
       </header>
+
       <main>{children}</main>
+
       <div className="layout-bottom">
         <div className="layout-bottom-content">
           <div className="bottom-social">
@@ -62,70 +51,8 @@ function LayoutComponent({ children }) {
               </a>
             </div>
           </div>
-          {/* <div className="bottom-links">
-            <h3>Tecnologias usadas</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://pt-br.reactjs.org/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  React
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://reactrouter.com/docs/en/v6/getting-started/overview"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  React Router v6
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://react-icons.github.io/react-icons"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  React Icons
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://axios-http.com/ptbr/docs/intro"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Axios
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://docs.magicthegathering.io/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  API das cartas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.mtggoldfish.com/q?utf8=%E2%9C%93&query_string="
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Site original para estudo
-                </a>
-              </li>
-            </ul>
-          </div> */}
         </div>
       </div>
-      {/* <div id="footer-message">
-        <p>Site recriado com React para fins educativos.</p>
-      </div> */}
     </div>
   )
 }

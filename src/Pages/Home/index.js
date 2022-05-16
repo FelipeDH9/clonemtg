@@ -12,11 +12,10 @@ function Home() {
   // const [noCards, setNoCards] = useState(false)
 
   async function fetchData() {
-    //função que busca cartas pelos serviços de api do magic.assets
-    const { data } = await getCards({ name: cardName }) //busca a API pela URL
+    const { data } = await getCards({ name: cardName })
     console.log('chamou', data)
     if (data) {
-      setAllCards(data.cards) //armazena o data.cards no estado allCards (), pois queremos a propriedade cards que esta em data
+      setAllCards(data.cards)
       setCurrentCard(data.cards)
     }
   }
@@ -34,7 +33,6 @@ function Home() {
           placeholder="Digite o nome da carta..."
           autoFocus="autofocus"
           onChange={value => setCardName(value.target.value)}
-          onSubmit={() => fetchData()}
         ></input>
 
         <button className="button" onClick={() => fetchData()}>

@@ -22,7 +22,7 @@ function Card() {
   }, [])
 
   return (
-    <div style={{ width: '100vw', heigth: '100vh' }}>
+    <div>
       {!loading ? (
         <div>
           <div className="titles">
@@ -56,6 +56,20 @@ function Card() {
                 <div className="artist">
                   #{cardById?.number} Illustrated by {cardById?.artist}
                 </div>
+                {cardById?.rulings && (
+                  <>
+                    <p id="rules-title">Rulings:</p>
+                    <div className="rulings">
+                      {cardById?.rulings.map(rule => {
+                        return (
+                          <p className="rule" key={rule.index}>
+                            - {rule.text}
+                          </p>
+                        )
+                      })}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
