@@ -6,17 +6,18 @@ import { GoSearch } from 'react-icons/go'
 import './styles.css'
 
 function Home() {
-  const [allCards, setAllCards] = useState()
-  const [currentCard, setCurrentCard] = useState()
+  const [currentCards, setCurrentCards] = useState()
   const [cardName, setCardName] = useState()
-  // const [noCards, setNoCards] = useState(false)
 
   async function fetchData() {
     const { data } = await getCards({ name: cardName })
     console.log('chamou', data)
     if (data) {
-      setAllCards(data.cards)
-      setCurrentCard(data.cards)
+      const sortedCards = await data.cards.sort((a, b) =>
+        a.name.localeCompare(b.name)
+      )
+
+      setCurrentCards(sortedCards)
     }
   }
 
@@ -42,25 +43,25 @@ function Home() {
 
       <table id="cardList">
         <tbody>
-          {currentCard?.map(card => {
+          {currentCards?.map(card => {
             return (
-              <tr key={card.id}>
-                <td>
-                  {card.imageUrl ? (
-                    <a href={`/card/${card.id}`} className="tooltip">
-                      {card.name}
-                      <img
-                        className="tooltipimage"
-                        src={card.imageUrl}
-                        alt="card"
-                      ></img>
-                    </a>
-                  ) : (
-                    <p>{card.name}</p>
-                  )}
-                </td>
-                <td>{card.setName}</td>
-              </tr>
+              <>
+                {card.imageUrl && (
+                  <tr key={card.id}>
+                    <td>
+                      <a href={`/card/${card.id}`} className="tooltip">
+                        {card.name}
+                        <img
+                          className="tooltipimage"
+                          src={card.imageUrl}
+                          alt="card"
+                        ></img>
+                      </a>
+                    </td>
+                    <td>{card.setName}</td>
+                  </tr>
+                )}
+              </>
             )
           })}
         </tbody>
