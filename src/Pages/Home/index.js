@@ -3,39 +3,45 @@ import { useState, useEffect } from 'react'
 import { getCards } from '../../services/magic/index'
 import { FaSearch } from 'react-icons/fa'
 import ReactPaginate from 'react-paginate'
-
+import { toInteger } from 'lodash'
+import Loading from '../../components/Loading'
+import useWindowDimensions from '../../hooks/useWindowResize'
 import './styles.css'
 
 function Home() {
   const [currentCards, setCurrentCards] = useState()
   const [cardName, setCardName] = useState()
-  const [currentItems, setCurrentItems] = useState([])
   const [pageCount, setPageCount] = useState(0)
-  const [itemOffset, setItemOffset] = useState(0)
-  const itemsPerPage = 15
+  const [loading, setLoading] = useState(false)
+  const pageSize = 20
+  const { width, height } = useWindowDimensions()
 
-  async function fetchData() {
-    const { data } = await getCards({ name: cardName })
+  async function fetchData(currentPage = 1) {
+    setLoading(true)
+    console.log({ currentPage })
+    const { data, headers } = await getCards({
+      name: cardName,
+      pageSize,
+      page: currentPage
+    })
+    setLoading(false)
+
     if (data) {
-      const dataArray = await data.cards
-      console.log('ARRAY ==', dataArray)
-      const sortedCards = await dataArray.sort((a, b) =>
-        a.name.localeCompare(b.name)
-      )
-      setCurrentCards(sortedCards)
+      const cards = await data.cards
+      const totalCount = headers['total-count'] || 0
+      setPageCount(Math.ceil(totalCount / pageSize))
+      setCurrentCards(cards)
     }
   }
 
-  const handlePageClick = event => {
-    const newOffset = (event.selected * itemsPerPage) % currentCards.length
-    setItemOffset(newOffset)
+  const handlePageClick = async event => {
+    // console.log({ select: event.selected })
+    await fetchData(event.selected + 1)
   }
 
   useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage
-    setCurrentItems(currentCards?.slice(itemOffset, endOffset))
-    setPageCount(Math.ceil(currentCards?.length / itemsPerPage))
-  }, [itemOffset, itemsPerPage, currentCards])
+    fetchData()
+  }, [])
 
   return (
     <div className="body-home">
@@ -55,8 +61,8 @@ function Home() {
 
       <table id="cardList">
         <tbody>
-          {currentItems?.map(card => {
-            return (
+          {!loading ? (
+            currentCards?.map(card => (
               <tr key={card.id}>
                 <td className="card-name">
                   {card.imageUrl ? (
@@ -74,8 +80,20 @@ function Home() {
                 </td>
                 <td>{card.setName}</td>
               </tr>
-            )
-          })}
+            ))
+          ) : (
+            <div
+              style={{
+                width: '100%',
+                height: '50vh',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}
+            >
+              <Loading />
+            </div>
+          )}
         </tbody>
       </table>
       {/* <table id="cardList">
@@ -103,7 +121,7 @@ function Home() {
           })}
         </tbody>
       </table> */}
-      {currentItems && (
+      {currentCards && (
         <ReactPaginate
           breakLabel="..."
           nextLabel=">"

@@ -2,16 +2,17 @@ import axios from 'axios'
 
 const doRequest = async ({ method = 'GET', body, headers, params, path }) => {
   try {
-    const { data } = await axios.request({
+    const response = await axios.request({
       method,
       params,
       url: `https://api.magicthegathering.io/v1${path}`,
       data: body,
       headers
     })
-    return { data, error: null }
+    return { data: response.data, headers: response.headers, error: null }
   } catch (error) {
-    return { data: null, error }
+    console.log({ error })
+    return { data: null, headers, error }
   }
 }
 
