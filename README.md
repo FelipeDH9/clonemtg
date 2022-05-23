@@ -1,4 +1,4 @@
-# PROJETO DE BUSCA DE CARTAS
+# PLANECARDS, projeto de busca de cartas!!!
 
 Este projeto foi feito em React, com o intuito de desenvolver minhas habilidades com essa biblioteca Javascript.
 
