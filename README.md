@@ -1,4 +1,4 @@
-<img src='https://github.com/FelipeDH9/planecards/blob/main/src/assets/logos/planeCardsLogo.png'>
+<a href='planecards.vercel.app'><img src='https://github.com/FelipeDH9/planecards/blob/main/src/assets/logos/planeCardsLogo.png'></a>
 
 Este projeto foi feito em React, com o intuito de desenvolver minhas habilidades com essa biblioteca Javascript.
 
@@ -16,5 +16,6 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
 </ul>
 
 <a href="https://planecards.vercel.app/">Teste o projeto!!!</a>
+
 
 O projeto ainda esta em desenvolivmento, pretendo deixar as telas mais responsivas, melhorar a experiência mobile, trazer novas funcionalidades, e no futuro fazer um aplicativo para celular.
