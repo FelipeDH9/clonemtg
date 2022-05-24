@@ -14,8 +14,8 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
   <li><a href='https://www.npmjs.com/package/react-paginate' target"_blank">React Paginate - Para paginação das respostas da API</a></li>
   <li>Vercel - Hospedagem da aplicação</li>
 </ul>
-
-<a href="https://planecards.vercel.app/">Teste o projeto!!!</a>
+<br>
+<h2><a href="https://planecards.vercel.app/">Teste o projeto!!!</a></h2>
 <p>As palavras a seguir vão gerar vários resultados, use elas ou outras para pesquisar e testar a aplicação:</p>
 <ul>
   <li>bolt</li>
