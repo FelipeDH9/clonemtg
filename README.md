@@ -16,6 +16,6 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
   <li>Vercel - Hospedagem da aplicação</li>
 </ul>
 
-<a href="https://clonemtg.vercel.app/">Teste o projeto!!!</a>
+<a href="https://planecards.vercel.app/">Teste o projeto!!!</a>
 
 O projeto ainda esta em desenvolivmento, pretendo deixar as telas mais responsivas, melhorar a experiência mobile, trazer novas funcionalidades, e no futuro fazer um aplicativo para celular.
