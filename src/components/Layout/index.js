@@ -11,7 +11,7 @@ function LayoutComponent({ children }) {
         <div className="header">
           <a href="/">
             <img
-              src={require('C:/Users/flavi/Documents/www/clonemtg/src/assets/logos/planeCardsLogo.png')}
+              src={require('../../assets/logos/planeCardsLogo.png')}
               alt="logo"
             />
           </a>
