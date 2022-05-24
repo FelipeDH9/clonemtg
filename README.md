@@ -21,7 +21,7 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
   <li>bolt</li>
   <li>demon</li>
   <li>angel</li>
-  <li>souls</li>
+  <li>soul</li>
 </ul>
 
 ### Proximos passos:
