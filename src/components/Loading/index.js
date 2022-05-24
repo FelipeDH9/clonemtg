@@ -1,5 +1,5 @@
 import './styles.css'
 
-const Loading = () => <div class="lds-dual-ring"></div>
+const Loading = () => <div className="lds-dual-ring"></div>
 
 export default Loading

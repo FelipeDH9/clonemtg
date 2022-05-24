@@ -1,3 +1,4 @@
+/* BODY */
 .body-home h3{
   font-size: 1.8rem;
   color: #fff;
@@ -52,14 +53,32 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
 }
 
-#cardList{
+
+/* CARDS-IMAGE-LIST WHEN width <= 767px */
+.cards-image-list {
+  justify-content: center;
+}
+
+
+.cards-image-list .card-image{
+  width: 13.75rem;
+  min-width: 100px;
+  border-radius: 5%;
+  margin: 5px;
+}
+
+
+
+/* CARDS-TABLE-LIST WHEN width > 767px */
+
+#card-table-list{
   border-spacing: 0px;
   max-width: 1500px;
   width: 100%;
 }
 
-#cardList td,
-#cardList th {
+#card-table-list td,
+#card-table-list th {
   border: 0px solid #ddd;
   border-bottom: 1px solid #444444;
   padding: .3rem;
@@ -71,21 +90,21 @@
   color: #fff;
 }
 
-#cardList tr:nth-child(even) {
+#card-table-list tr:nth-child(even) {
   background-color: #303030;
 }
 
-#cardList tbody tr a{
+#card-table-list tbody tr a{
   cursor: pointer;
   text-decoration: none;
   color:#6fb7e7
 }
 
-#cardList tbody tr a:hover{
+#card-table-list tbody tr a:hover{
   text-decoration:underline;
 }
 
-
+/* TOOLTIP */
 .tooltip{
   position: relative;
   display: inline-block;
@@ -112,6 +131,7 @@
   visibility: visible;
 }
 
+/* PAGINATION */
 .pagination{
   list-style: none;
   display: flex;
@@ -141,7 +161,7 @@
 
 
 @media (max-width: 767px){
-  .tooltip{
+  /* .tooltip{
     position: relative;
     display: inline-block;
   }
@@ -149,7 +169,6 @@
   .tooltip .tooltipimage {
     visibility: hidden;
     width: 200px;
-    /* height:  */
     background-color: #303030;
     color: #fff;
     text-align: center;
@@ -161,5 +180,13 @@
   
     top: -145px;
     left: 55%;
+  } */
+
+  .pagination .page-num {
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 400;
   }
+  
 }
