@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react'
-// import NoCards from '../../components/NoCards'
 import { getCards } from '../../services/magic/index'
 import { FaSearch } from 'react-icons/fa'
 import ReactPaginate from 'react-paginate'
 import Loading from '../../components/Loading'
 import useWindowDimensions from '../../hooks/useWindowResize'
 import './styles.css'
-import { set } from 'lodash'
 
 function Home() {
   const [currentCards, setCurrentCards] = useState()
@@ -53,10 +51,11 @@ function Home() {
           autoFocus="autofocus"
           onChange={value => setCardName(value.target.value)}
         ></input>
-
-        <button className="button" onClick={() => fetchData()}>
-          <FaSearch />
-        </button>
+        <div className="button-wrapper">
+          <button className="button" onClick={() => fetchData()}>
+            <FaSearch />
+          </button>
+        </div>
       </div>
       {width <= 767 ? (
         <div className="cards-image-list">
@@ -128,44 +127,6 @@ function Home() {
           </tbody>
         </table>
       )}
-      {/* {width <= 767px ? () : ()} */}
-      {/* <table id="cardList">
-        <tbody>
-          {!loading ? (
-            currentCards?.map(card => (
-              <tr key={card.id}>
-                <td className="card-name">
-                  {card.imageUrl ? (
-                    <a href={`/card/${card.id}`} className="tooltip">
-                      {card.name}
-                      <img
-                        className="tooltipimage"
-                        src={card.imageUrl}
-                        alt="card"
-                      ></img>
-                    </a>
-                  ) : (
-                    <p>{card.name}</p>
-                  )}
-                </td>
-                <td>{card.setName}</td>
-              </tr>
-            ))
-          ) : (
-            <div
-              style={{
-                width: '100%',
-                height: '50vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-            >
-              <Loading />
-            </div>
-          )}
-        </tbody>
-      </table> */}
 
       {currentCards && (
         <ReactPaginate

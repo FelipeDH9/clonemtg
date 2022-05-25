@@ -1,13 +1,16 @@
 import './styles.css'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { getCard } from '../../services/magic'
 import Skeleton from '../../components/Skeleton'
+import { FaLongArrowAltLeft } from 'react-icons/fa'
 
 function Card() {
   const { id } = useParams()
   const [cardById, setCardById] = useState()
   const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
   async function getCardById() {
     setLoading(true)
@@ -15,6 +18,10 @@ function Card() {
     setLoading(false)
     const data = await res.data.card
     setCardById(data)
+  }
+
+  const handleClick = () => {
+    navigate('/', { replace: true })
   }
 
   useEffect(() => {
@@ -25,6 +32,10 @@ function Card() {
     <div>
       {!loading ? (
         <div>
+          <button onClick={handleClick} className="return-button">
+            <FaLongArrowAltLeft id="return-icon" />
+          </button>
+
           <div className="titles">
             <h3 id="card-name">{cardById?.name}</h3>
             <h3>{cardById?.setName}</h3>

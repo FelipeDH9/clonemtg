@@ -1,5 +1,5 @@
 .container {
-    background-color: #222222; 
+    background-color: rgb(34, 34, 34); 
   }
   
   /* HEADER */
@@ -36,8 +36,8 @@
 
     /* FOOTER */
   .layout-bottom{
-    min-height: 200px;
-    background-color: #464548;
+    min-height: 150px;
+    background-color: rgb(70, 69, 72);
     padding: 15px;
     margin-top: 2rem;
   }
@@ -46,7 +46,7 @@
     font-size: 26px;
     line-height: 21.6px;
     margin-bottom: 1rem;
-    color: rgba(118, 74, 241, 1);
+    color: rgb(118, 74, 241);
   }
   
   .layout-bottom-content{
@@ -61,8 +61,7 @@
     margin-right: 5px;
     font-size: 30px;
     padding-bottom: 10px;
-    /* justify-content: center; */
-    color: #fff;
+    color: rgb(255, 255, 255);
     transition: filter 0.2s;
   }
 
@@ -70,23 +69,20 @@
     filter: brightness(0.7);    
   }
 
-
+  /* SCROLLBAR */
   ::-webkit-scrollbar {
     width: 12px;
   }
  
   ::-webkit-scrollbar-thumb {
-    background-color: #303030; 
+    background-color: rgb(48, 48, 48); 
     border-radius: 20px;     
   }
 
   *::-webkit-scrollbar-track {
-    background: #222222;
+    background: rgb(34, 34, 34);
   }
 
-  @media (max-width: 1200px){
-    
-  }
   
   @media (max-width: 767px){
     .layout-bottom{
@@ -98,7 +94,7 @@
     .layout-bottom-content{
       display: flex;
       flex-direction: column;
-      max-width: 767px;
+      max-width: 766px;
       margin: 0 auto;
       text-align: center;
     }
