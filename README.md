@@ -5,6 +5,7 @@ Este projeto foi feito em React, com o intuito de desenvolver minhas habilidades
 O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizards.com/pt-BR">Magic</a> pelo seu nome, gerando uma lista paginada com os resultados da busca, e ao clicar no nome da carta é redirecionado para outra página com os detalhes da carta.
 
 ## Tecnologias utilizadas
+
 <ul> 
   <li>React - Biblioteca Javascript</li>
   <li><a href="https://reactrouter.com/docs/en/v6/getting-started/overview" target="_blank">React Router - Roteador React</a></li>
@@ -24,11 +25,13 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
   <li>soul</li>
 </ul>
 
+<!-- .. -->
+
 ### Proximos passos:
+
 <ul>
   <li>Deixar as telas mais responsivas</li>
   <li>Melhorar a experiência mobile</li>
   <li>Trazer novas funcionalidades</li>
   <li>Fazer um aplicativo para celular</li>
 </ul>
-
