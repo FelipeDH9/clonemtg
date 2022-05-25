@@ -1,11 +1,10 @@
-# PLANECARDS, projeto de busca de cartas!!!
+<a href='https://planecards.vercel.app/'><img src='https://github.com/FelipeDH9/planecards/blob/main/src/assets/logos/planeCardsLogo.png'></a>
 
 Este projeto foi feito em React, com o intuito de desenvolver minhas habilidades com essa biblioteca Javascript.
 
 O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizards.com/pt-BR">Magic</a> pelo seu nome, gerando uma lista paginada com os resultados da busca, e ao clicar no nome da carta é redirecionado para outra página com os detalhes da carta.
 
 ## Tecnologias utilizadas
-
 <ul> 
   <li>React - Biblioteca Javascript</li>
   <li><a href="https://reactrouter.com/docs/en/v6/getting-started/overview" target="_blank">React Router - Roteador React</a></li>
@@ -15,7 +14,21 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
   <li><a href='https://www.npmjs.com/package/react-paginate' target"_blank">React Paginate - Para paginação das respostas da API</a></li>
   <li>Vercel - Hospedagem da aplicação</li>
 </ul>
+<br>
+<h2><a href="https://planecards.vercel.app/">Teste o projeto!!!</a></h2>
+<p>As palavras a seguir vão gerar vários resultados, use elas ou outras para pesquisar e testar a aplicação:</p>
+<ul>
+  <li>bolt</li>
+  <li>demon</li>
+  <li>angel</li>
+  <li>soul</li>
+</ul>
 
-<a href="https://clonemtg.vercel.app/">Teste o projeto!!!</a>
+### Proximos passos:
+<ul>
+  <li>Deixar as telas mais responsivas</li>
+  <li>Melhorar a experiência mobile</li>
+  <li>Trazer novas funcionalidades</li>
+  <li>Fazer um aplicativo para celular</li>
+</ul>
 
-O projeto ainda esta em desenvolivmento, pretendo deixar as telas mais responsivas, melhorar a experiência mobile, trazer novas funcionalidades, e no futuro fazer um aplicativo para celular.
