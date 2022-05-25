@@ -14,13 +14,13 @@
     margin: 0 auto;
     max-width: 1500px;
     justify-content: space-between;
-    padding: 0.25rem;
+    padding: 0.25rem 1rem;
     align-items: center;
   }
   
   header img{
     display: block;
-    width: 9.375rem;
+    width: 10.2rem;
     margin-right: 2rem;
   }
   

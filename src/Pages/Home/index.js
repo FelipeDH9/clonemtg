@@ -11,7 +11,7 @@ function Home() {
   const [cardName, setCardName] = useState()
   const [pageCount, setPageCount] = useState(0)
   const [loading, setLoading] = useState(false)
-  const [pageSize, setPageSize] = useState(20)
+  const pageSize = 24
   const { width, height } = useWindowDimensions()
 
   async function fetchData(currentPage = 1) {
@@ -19,6 +19,7 @@ function Home() {
     console.log({ currentPage })
     const { data, headers } = await getCards({
       name: cardName,
+      contains: 'imageUrl',
       pageSize,
       page: currentPage
     })
@@ -61,18 +62,15 @@ function Home() {
         <div className="cards-image-list">
           {!loading ? (
             <div className="flex-wrapper">
-              {currentCards?.map(
-                card =>
-                  card.imageUrl && (
-                    <a href={`/card/${card.id}`} key={card.id}>
-                      <img
-                        src={card.imageUrl}
-                        alt="card"
-                        className="card-image"
-                      ></img>
-                    </a>
-                  )
-              )}
+              {currentCards?.map(card => (
+                <a href={`/card/${card.id}`} key={card.id}>
+                  <img
+                    src={card.imageUrl}
+                    alt="card"
+                    className="card-image"
+                  ></img>
+                </a>
+              ))}
             </div>
           ) : (
             <div

@@ -146,7 +146,7 @@ color: rgb(255, 255, 255);
   line-height: 20px;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 767px){
   .card-info{
     display: block;
     max-width: 100%;
