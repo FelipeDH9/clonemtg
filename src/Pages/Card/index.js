@@ -43,8 +43,8 @@ function Card() {
           <div className="card-info">
             <div className="card-image-butons">
               <img src={cardById?.imageUrl} alt="card" />
-              <button>Add to collection</button>
-              <button>Create price Alert</button>
+              {/* <button>Add to collection</button>
+              <button>Create price Alert</button> */}
             </div>
             <div className="card-info-box">
               <div className="info-box">

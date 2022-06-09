@@ -9,14 +9,13 @@ import './styles.css'
 function Home() {
   const [currentCards, setCurrentCards] = useState()
   const [cardName, setCardName] = useState()
-  const [pageCount, setPageCount] = useState(0)
-  const [loading, setLoading] = useState(false)
-  const pageSize = 24
   const { width, height } = useWindowDimensions()
+  const [loading, setLoading] = useState(false)
+  const [pageCount, setPageCount] = useState(0)
+  const pageSize = 24
 
   async function fetchData(currentPage = 1) {
     setLoading(true)
-    console.log({ currentPage })
     const { data, headers } = await getCards({
       name: cardName,
       contains: 'imageUrl',
