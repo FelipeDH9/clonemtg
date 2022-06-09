@@ -15,7 +15,6 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
   <li><a href='https://www.npmjs.com/package/react-paginate' target"_blank">React Paginate - Para paginação das respostas da API</a></li>
   <li>Vercel - Hospedagem da aplicação</li>
 </ul>
-<br>
 <h2><a href="https://planecards.vercel.app/">Teste o projeto!!!</a></h2>
 <p>As palavras a seguir vão gerar vários resultados, use elas ou outras para pesquisar e testar a aplicação:</p>
 <ul>
@@ -25,13 +24,12 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
   <li>soul</li>
 </ul>
 
-<!-- .. -->
-
 ### Proximos passos:
 
 <ul>
-  <li>Deixar as telas mais responsivas</li>
   <li>Melhorar a experiência mobile</li>
-  <li>Trazer novas funcionalidades</li>
+  <li>Trazer novas funcionalidades, como um marcador de vida com o registro</li>
+  <li>Criar uma busca avançada, podendo procurar por mais de um critério, como o nome da carta e a cor dela</li>
   <li>Fazer um aplicativo para celular</li>
+  <li>Utilizar a API Scryfall para resultados mais complexos, como preços das cartas e ordem alfabética</li>
 </ul>
