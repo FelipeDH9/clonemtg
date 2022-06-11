@@ -1,0 +1,20 @@
+.to-top-button{ 
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  
+  width: 2rem;
+  height: 2rem;
+  clip-path: circle();
+  padding: .2rem;
+  
+  background-color: #CCCCCC;
+  color: rgb(118, 74, 241);
+
+  transition: 0.3s;
+}
+
+.to-top-button:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+}

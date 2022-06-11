@@ -3,6 +3,7 @@ import { GrLinkedinOption } from 'react-icons/gr'
 import { VscGithub } from 'react-icons/vsc'
 import { MdEmail } from 'react-icons/md'
 import { AiFillInstagram } from 'react-icons/ai'
+import { ToTopButton } from '../ToTopButton'
 
 function LayoutComponent({ children }) {
   return (
@@ -19,7 +20,7 @@ function LayoutComponent({ children }) {
       </header>
 
       <main>{children}</main>
-
+      <ToTopButton />
       <div className="layout-bottom">
         <div className="layout-bottom-content">
           <div className="bottom-social">
