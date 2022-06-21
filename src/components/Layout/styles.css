@@ -25,6 +25,17 @@
   }
   
 
+  .searchIcon{
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 1rem;
+  }
+
+  .diceIcon{
+    font-size: 2rem;
+    color: #fff;
+  }
+
   /* MAIN */
   main{
     max-width: 1500px;

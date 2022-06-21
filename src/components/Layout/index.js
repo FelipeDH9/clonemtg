@@ -4,6 +4,8 @@ import { VscGithub } from 'react-icons/vsc'
 import { MdEmail } from 'react-icons/md'
 import { AiFillInstagram } from 'react-icons/ai'
 import { ToTopButton } from '../ToTopButton'
+import { FaDiceD20 } from 'react-icons/fa'
+import { BiSearchAlt } from 'react-icons/bi'
 
 function LayoutComponent({ children }) {
   return (
@@ -16,6 +18,14 @@ function LayoutComponent({ children }) {
               alt="logo"
             />
           </a>
+          <nav>
+            <a href="/">
+              <BiSearchAlt className="searchIcon" />
+            </a>
+            <a href="/lifecount">
+              <FaDiceD20 className="diceIcon" />
+            </a>
+          </nav>
         </div>
       </header>
 
