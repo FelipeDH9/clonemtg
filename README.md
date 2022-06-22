@@ -28,7 +28,7 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
 
 <ul>
   <li>Melhorar a experiência mobile</li>
-  <li>Trazer novas funcionalidades, como um marcador de vida com o registro</li>
+  <li>Trazer novas funcionalidades</li>
   <li>Criar uma busca avançada, podendo procurar por mais de um critério, como o nome da carta e a cor dela</li>
   <li>Fazer um aplicativo para celular</li>
   <li>Utilizar a API Scryfall para resultados mais complexos, como preços das cartas e ordem alfabética</li>
