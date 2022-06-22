@@ -5,7 +5,6 @@
   /* HEADER */
   header {
     background: linear-gradient(to right, rgba(118, 74, 241, 1), rgba(118, 74, 241, .5));
-    margin-bottom: 20px;
   }
   
   header .header {
@@ -82,7 +81,7 @@
 
   /* SCROLLBAR */
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
   }
  
   ::-webkit-scrollbar-thumb {
