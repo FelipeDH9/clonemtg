@@ -43,6 +43,22 @@
     padding: 5px 15px;
   }
   
+  .fullSizeNav>a{
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .fullSizeNav .cardSearchMenu{
+   margin-right: 2rem;
+  }
+
+
+  .fullSizeNav>a:hover{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.705);
+    text-decoration: underline;
+  }
 
     /* FOOTER */
   .layout-bottom{

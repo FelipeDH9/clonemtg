@@ -31,7 +31,7 @@ function LifeCount() {
       <div className="lifeBlock">
         <div className="lifeRegister">
           <table className="lifeTable">
-            <tbody>
+            <tbody className="teste">
               {myRegister?.map(e => (
                 <tr>
                   <td>

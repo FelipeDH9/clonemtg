@@ -60,13 +60,12 @@ p{
   width: 4rem;
 
   max-height: 248px;
-  flex-direction: column;
+  flex-direction: column-reverse;
 
   overflow-y: scroll;
   color: #fff;
   text-align: center;
   border-spacing: 0px;
-
 }
 
 .lifeTable tbody td{ 

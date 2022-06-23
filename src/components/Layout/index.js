@@ -6,8 +6,11 @@ import { AiFillInstagram } from 'react-icons/ai'
 import { ToTopButton } from '../ToTopButton'
 import { FaDiceD20 } from 'react-icons/fa'
 import { BiSearchAlt } from 'react-icons/bi'
+import useWindowDimensions from '../../hooks/useWindowResize'
 
 function LayoutComponent({ children }) {
+  const { width, height } = useWindowDimensions()
+
   return (
     <div className="container">
       <header>
@@ -18,14 +21,23 @@ function LayoutComponent({ children }) {
               alt="logo"
             />
           </a>
-          <nav>
-            <a href="/">
-              <BiSearchAlt className="searchIcon" />
-            </a>
-            <a href="/lifecount">
-              <FaDiceD20 className="diceIcon" />
-            </a>
-          </nav>
+          {width <= 767 ? (
+            <nav>
+              <a href="/">
+                <BiSearchAlt className="searchIcon" />
+              </a>
+              <a href="/lifecount">
+                <FaDiceD20 className="diceIcon" />
+              </a>
+            </nav>
+          ) : (
+            <nav className="fullSizeNav">
+              <a href="/" className="cardSearchMenu">
+                Buscar cartas
+              </a>
+              <a href="/lifecount">Marcador de Vidas</a>
+            </nav>
+          )}
         </div>
       </header>
 
