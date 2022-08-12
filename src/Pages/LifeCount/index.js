@@ -8,7 +8,7 @@ function LifeCount() {
   const [hisLife, setHisLife] = useState(20)
   const [hisRegister, setHisRegister] = useState([20])
 
-  function changeMyLife(value) {
+  function handleMyLife(value) {
     const myNewLife = parseInt(myLife) + parseInt(value)
     const myOldLife = myLife
 
@@ -17,7 +17,7 @@ function LifeCount() {
     setMyLife(eval(myNewLife))
   }
 
-  function changeHisLife(value) {
+  function handleHisLife(value) {
     const hisNewLife = parseInt(hisLife) + parseInt(value)
     const hisOldLife = hisLife
 
@@ -27,75 +27,7 @@ function LifeCount() {
   }
 
   return (
-    <div className="container2">
-      <div className="lifeBlock">
-        <div className="lifeRegister">
-          <table className="lifeTable">
-            <tbody className="teste">
-              {myRegister?.map(e => (
-                <tr>
-                  <td>
-                    {e.value >= 0 ? (
-                      <p style={{ color: '#8af34d' }}>+{e.value}</p>
-                    ) : (
-                      <p style={{ color: '#eb5555' }}>{e.value}</p>
-                    )}
-                  </td>
-                  <td>{e.myNewLife}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="lifeAndButtons">
-          <p className="life">{myLife}</p>
-          <div className="buttons-wrapper">
-            <button
-              className="btnPlus1 btnPlus"
-              value={+1}
-              onClick={event => changeMyLife(event.target.value)}
-            >
-              +1
-            </button>
-            <button
-              className="btnMinus1 btnMinus"
-              value={-1}
-              onClick={event => changeMyLife(event.target.value)}
-            >
-              -1
-            </button>
-            <button
-              className="btnPlus2 btnPlus"
-              value={+2}
-              onClick={event => changeMyLife(event.target.value)}
-            >
-              +2
-            </button>
-            <button
-              className="btnMinus2 btnMinus"
-              value={-2}
-              onClick={event => changeMyLife(event.target.value)}
-            >
-              -2
-            </button>
-            <button
-              value={+3}
-              className="btnPlus3 btnPlus"
-              onClick={event => changeMyLife(event.target.value)}
-            >
-              +3
-            </button>
-            <button
-              value={-3}
-              className="btnMinus3 btnMinus"
-              onClick={event => changeMyLife(event.target.value)}
-            >
-              -3
-            </button>
-          </div>
-        </div>
-      </div>
-
+    <div className="container">
       <div className="lifeBlock">
         <div className="lifeRegister">
           <table className="lifeTable">
@@ -121,42 +53,110 @@ function LifeCount() {
             <button
               className="btnPlus1 btnPlus"
               value={+1}
-              onClick={event => changeHisLife(event.target.value)}
+              onClick={event => handleHisLife(event.target.value)}
             >
               +1
             </button>
             <button
               className="btnMinus1 btnMinus"
               value={-1}
-              onClick={event => changeHisLife(event.target.value)}
+              onClick={event => handleHisLife(event.target.value)}
             >
               -1
             </button>
             <button
               className="btnPlus2 btnPlus"
               value={+2}
-              onClick={event => changeHisLife(event.target.value)}
+              onClick={event => handleHisLife(event.target.value)}
             >
               +2
             </button>
             <button
               className="btnMinus2 btnMinus"
               value={-2}
-              onClick={event => changeHisLife(event.target.value)}
+              onClick={event => handleHisLife(event.target.value)}
             >
               -2
             </button>
             <button
               value={+3}
               className="btnPlus3 btnPlus"
-              onClick={event => changeHisLife(event.target.value)}
+              onClick={event => handleHisLife(event.target.value)}
             >
               +3
             </button>
             <button
               value={-3}
               className="btnMinus3 btnMinus"
-              onClick={event => changeHisLife(event.target.value)}
+              onClick={event => handleHisLife(event.target.value)}
+            >
+              -3
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="lifeBlock">
+        <div className="lifeRegister">
+          <table className="lifeTable">
+            <tbody>
+              {myRegister?.map(e => (
+                <tr>
+                  <td>
+                    {e.value >= 0 ? (
+                      <p style={{ color: '#8af34d' }}>+{e.value}</p>
+                    ) : (
+                      <p style={{ color: '#eb5555' }}>{e.value}</p>
+                    )}
+                  </td>
+                  <td>{e.myNewLife}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="lifeAndButtons">
+          <p className="life">{myLife}</p>
+          <div className="buttons-wrapper">
+            <button
+              className="btnPlus1 btnPlus"
+              value={+1}
+              onClick={event => handleMyLife(event.target.value)}
+            >
+              +1
+            </button>
+            <button
+              className="btnMinus1 btnMinus"
+              value={-1}
+              onClick={event => handleMyLife(event.target.value)}
+            >
+              -1
+            </button>
+            <button
+              className="btnPlus2 btnPlus"
+              value={+2}
+              onClick={event => handleMyLife(event.target.value)}
+            >
+              +2
+            </button>
+            <button
+              className="btnMinus2 btnMinus"
+              value={-2}
+              onClick={event => handleMyLife(event.target.value)}
+            >
+              -2
+            </button>
+            <button
+              value={+3}
+              className="btnPlus3 btnPlus"
+              onClick={event => handleMyLife(event.target.value)}
+            >
+              +3
+            </button>
+            <button
+              value={-3}
+              className="btnMinus3 btnMinus"
+              onClick={event => handleMyLife(event.target.value)}
             >
               -3
             </button>

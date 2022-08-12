@@ -35,7 +35,7 @@ function LayoutComponent({ children }) {
               <a href="/" className="cardSearchMenu">
                 Buscar cartas
               </a>
-              <a href="/lifecount">Marcador de Vidas</a>
+              <a href="/lifecount">Marcador de Vida</a>
             </nav>
           )}
         </div>
