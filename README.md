@@ -1,22 +1,23 @@
 <a href='https://planecards.vercel.app/'><img src='https://github.com/FelipeDH9/planecards/blob/main/src/assets/logos/planeCardsLogo.png'></a>
 
-Este projeto foi feito em React, com o intuito de desenvolver minhas habilidades com essa biblioteca Javascript.
+This is my first React project, the PlaneCards.
 
-O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizards.com/pt-BR">Magic</a> pelo seu nome, gerando uma lista paginada com os resultados da busca, e ao clicar no nome da carta é redirecionado para outra página com os detalhes da carta.
+It's an application for <a href="https://magic.wizards.com/pt-BR">Magic: The Gathering</a> players, with three pages, one for search cards by name and creating a table with the results, the second contains all details about the selected card, and the third is a life counter with the history of changes.
 
-## Tecnologias utilizadas
+
+## Technologies used:
 
 <ul> 
-  <li>React - Biblioteca Javascript</li>
-  <li><a href="https://reactrouter.com/docs/en/v6/getting-started/overview" target="_blank">React Router - Roteador React</a></li>
+  <li>React</li>
+  <li><a href="https://reactrouter.com/docs/en/v6/getting-started/overview" target="_blank">React Router</a></li>
   <li><a href="https://axios-http.com/ptbr/docs/intro" target="_blank">Axios</a></li>
-  <li><a href="https://docs.magicthegathering.io/" target="_blank">API utilizada para fornecer dados</a></li>
-  <li>Git - Para versionamento de códigos</li>
-  <li><a href='https://www.npmjs.com/package/react-paginate' target"_blank">React Paginate - Para paginação das respostas da API</a></li>
-  <li>Vercel - Hospedagem da aplicação</li>
+  <li><a href="https://docs.magicthegathering.io/" target="_blank">API providing the Magic: The Gathering cards data</a></li>
+  <li>Git</li>
+  <li>Vercel</li>
 </ul>
-<h2><a href="https://planecards.vercel.app/">Teste o projeto!!!</a></h2>
-<p>As palavras a seguir vão gerar vários resultados, use elas ou outras para pesquisar e testar a aplicação:</p>
+<h2><a href="https://planecards.vercel.app/">Try it out!!!</a></h2>
+The following words will respond with a lot of data, try the search page with one of them or be creative:
+
 <ul>
   <li>bolt</li>
   <li>demon</li>
@@ -24,12 +25,12 @@ O projeto é uma aplicação de busca de cartas de <a href="https://magic.wizard
   <li>soul</li>
 </ul>
 
-### Proximos passos:
+### Next steps:
 
 <ul>
-  <li>Melhorar a experiência mobile</li>
-  <li>Trazer novas funcionalidades</li>
-  <li>Criar uma busca avançada, podendo procurar por mais de um critério, como o nome da carta e a cor dela</li>
-  <li>Fazer um aplicativo para celular</li>
-  <li>Utilizar a API Scryfall para resultados mais complexos, como preços das cartas e ordem alfabética</li>
+  <li>Improve mobile experience</li>
+  <li>New features</li>
+  <li>Create a advanced search, to search cards by other details, like edition, mana cost, color, types and so on</li>
+  <li>Change the API used to another that provides cards prices and is order alphabetically </li>
+  <li>Create a mobile app</li>
 </ul>
