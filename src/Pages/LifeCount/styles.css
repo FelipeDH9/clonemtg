@@ -3,11 +3,11 @@ p{
 }
 
 /* LAYOUT */
-.lifeRegister{
+.life-register{
   display: flex;
 }
 
-.lifeAndButtons{
+.life-buttons{
   width: 70%;
 }
 
@@ -17,7 +17,7 @@ p{
   text-align: center;
 }
 
-.lifeBlock{
+.life-block{
   display: flex;
   justify-content: space-between;
   height: 50%;
@@ -55,7 +55,7 @@ p{
 }
 
 /* LIFE TABLE */
-.lifeTable{
+.life-table{
   display: flex;
   width: 4rem;
 
@@ -68,10 +68,34 @@ p{
   border-spacing: 0px;
 }
 
-.lifeTable tbody td{ 
+.life-table tbody td{ 
   padding: 2px;
 }
 
-.lifeTable tr:nth-child(even) {
+.life-table tr:nth-child(even) {
   background-color: rgb(48, 48, 48);
+}
+
+/* STORM */
+.storm-block p{
+color: rgba(118, 74, 241, 1);
+font-weight: 700;
+}
+
+.storm-block{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-size: 2rem;
+}
+
+.storm-block button{
+  width: 3rem;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  font-size: 2rem;
+  cursor: pointer;
 }

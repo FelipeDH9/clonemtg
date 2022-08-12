@@ -8,6 +8,8 @@ function LifeCount() {
   const [hisLife, setHisLife] = useState(20)
   const [hisRegister, setHisRegister] = useState([20])
 
+  const [stormCount, setStormCount] = useState(0)
+
   function handleMyLife(value) {
     const myNewLife = parseInt(myLife) + parseInt(value)
     const myOldLife = myLife
@@ -28,9 +30,9 @@ function LifeCount() {
 
   return (
     <div className="container">
-      <div className="lifeBlock">
-        <div className="lifeRegister">
-          <table className="lifeTable">
+      <div className="life-block">
+        <div className="life-register">
+          <table className="life-table">
             <tbody>
               {hisRegister?.map(e => (
                 <tr>
@@ -47,7 +49,7 @@ function LifeCount() {
             </tbody>
           </table>
         </div>
-        <div className="lifeAndButtons">
+        <div className="life-buttons">
           <p className="life">{hisLife}</p>
           <div className="buttons-wrapper">
             <button
@@ -96,9 +98,9 @@ function LifeCount() {
         </div>
       </div>
 
-      <div className="lifeBlock">
-        <div className="lifeRegister">
-          <table className="lifeTable">
+      <div className="life-block">
+        <div className="life-register">
+          <table className="life-table">
             <tbody>
               {myRegister?.map(e => (
                 <tr>
@@ -115,7 +117,7 @@ function LifeCount() {
             </tbody>
           </table>
         </div>
-        <div className="lifeAndButtons">
+        <div className="life-buttons">
           <p className="life">{myLife}</p>
           <div className="buttons-wrapper">
             <button
@@ -162,6 +164,24 @@ function LifeCount() {
             </button>
           </div>
         </div>
+      </div>
+      <div className="storm-block">
+        <p>Storm </p>
+        <button
+          onClick={() => {
+            setStormCount(0)
+          }}
+        >
+          0
+        </button>
+        <p>{stormCount}</p>
+        <button
+          onClick={() => {
+            setStormCount(stormCount + 1)
+          }}
+        >
+          +1
+        </button>
       </div>
     </div>
   )
