@@ -69,9 +69,9 @@ function Card() {
                   <>
                     <p id="rules-title">Rulings:</p>
                     <div className="rulings">
-                      {cardById?.rulings.map(rule => {
+                      {cardById?.rulings.map((rule, i) => {
                         return (
-                          <p className="rule" key={rule.index}>
+                          <p className="rule" key={i}>
                             - {rule.text}
                           </p>
                         )

@@ -1,20 +1,27 @@
-import { useState, useEffect } from 'react'
-import { getCards } from '../../services/magic/index'
-import { FaSearch } from 'react-icons/fa'
-import ReactPaginate from 'react-paginate'
-import Loading from '../../components/Loading'
-import useWindowDimensions from '../../hooks/useWindowResize'
 import './styles.css'
+
+// axios
+import { getCards } from '../../services/magic/index'
+
+import ReactPaginate from 'react-paginate'
+
+// components
+import Loading from '../../components/Loading'
+
+// hooks
+import { useState, useEffect } from 'react'
+import useWindowDimensions from '../../hooks/useWindowResize'
+// import { FaSearch } from 'react-icons/fa'
 
 function Home() {
   const [currentCards, setCurrentCards] = useState()
   const [cardName, setCardName] = useState()
-  const { width, height } = useWindowDimensions()
+  const { width } = useWindowDimensions()
   const [loading, setLoading] = useState(false)
   const [pageCount, setPageCount] = useState(0)
   const pageSize = 24
 
-  async function fetchData(currentPage = 1) {
+  const fetchData = async (currentPage = 1) => {
     setLoading(true)
     const { data, headers } = await getCards({
       name: cardName,
@@ -29,8 +36,12 @@ function Home() {
       const totalCount = headers['total-count'] || 0
       setPageCount(Math.ceil(totalCount / pageSize))
       setCurrentCards(cards)
-      console.log(currentCards)
     }
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    fetchData()
   }
 
   const handlePageClick = async event => {
@@ -44,19 +55,24 @@ function Home() {
   return (
     <div className="body-home">
       <h3>Pesquisa</h3>
+
+      {/* search input */}
       <div className="search">
-        <input
-          type="text"
-          placeholder="Digite o nome da carta..."
-          autoFocus="autofocus"
-          onChange={value => setCardName(value.target.value)}
-        ></input>
+        <form onSubmit={handleSubmit}>
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Digite o nome da carta..."
+            autoFocus="autofocus"
+            onChange={value => setCardName(value.target.value)}
+          ></input>
+        </form>
         <div className="button-wrapper">
-          <button className="button" onClick={() => fetchData()}>
-            <FaSearch />
-          </button>
+          <input type="submit" value="Buscar" className="button" />
         </div>
       </div>
+
+      {/* responsive list */}
       {width <= 767 ? (
         <div className="cards-image-list">
           {!loading ? (

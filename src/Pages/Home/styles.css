@@ -9,11 +9,10 @@
 .body-home .search{
   width: 100%;
   max-width: 1500px;
-  margin-bottom: 1.5rem ;
 }
 
 /* INPUT SEARCH */
-.body-home .search input{
+.body-home .search .search-input{
   padding: 0.375rem 0.75rem;
   font-weight: 400;
   font-size: .9375rem;
@@ -26,17 +25,18 @@
   outline: none;
 }
 
-.body-home .search input:focus, .body-home .search input:hover{
+.body-home .search .search-input:focus, .body-home .search .search-inputt:hover{
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
 }
 
 /* BUTTON SEARCH */
-.search .button-wrapper{
+.button-wrapper{
   display: flex;
   justify-content: center;
+  margin-bottom: 1.5rem ;
 }
 
-.search .button-wrapper .button{
+.button-wrapper .button{
   padding: 0.375rem 0.75rem;
   font-weight: 400;
   text-align: center;
