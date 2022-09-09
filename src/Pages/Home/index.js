@@ -66,10 +66,10 @@ function Home() {
             autoFocus="autofocus"
             onChange={value => setCardName(value.target.value)}
           ></input>
+          <div className="button-wrapper">
+            <input type="submit" value="Buscar" className="button" />
+          </div>
         </form>
-        <div className="button-wrapper">
-          <input type="submit" value="Buscar" className="button" />
-        </div>
       </div>
 
       {/* responsive list */}
