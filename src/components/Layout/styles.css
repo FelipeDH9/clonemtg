@@ -2,39 +2,6 @@
     background-color: rgb(34, 34, 34); 
   }
   
-  /* HEADER */
-  header {
-    background: linear-gradient(to right, rgba(118, 74, 241, 1), rgba(118, 74, 241, .5));
-  }
-  
-  header .header {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    max-width: 1500px;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    align-items: center;
-  }
-  
-  header img{
-    display: block;
-    width: 10.2rem;
-    margin-right: 2rem;
-  }
-  
-
-  .searchIcon{
-    font-size: 2rem;
-    color: #fff;
-    margin-right: 1rem;
-  }
-
-  .diceIcon{
-    font-size: 2rem;
-    color: #fff;
-  }
-
   /* MAIN */
   main{
     max-width: 1500px;

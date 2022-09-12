@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 
+scryfall.js
 # testing
 /coverage
 

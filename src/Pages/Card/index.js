@@ -1,40 +1,44 @@
 import './styles.css'
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+
+// hooks
+import { useEffect, useState, useCallback } from 'react'
+
+// router
+import { useParams, Link } from 'react-router-dom'
+
+// services
 import { getCard } from '../../services/magic'
+
+// components
 import Skeleton from '../../components/Skeleton'
-import { FaLongArrowAltLeft } from 'react-icons/fa'
+
+// icons
+import { IoMdArrowBack } from 'react-icons/io'
 
 function Card() {
   const { id } = useParams()
   const [cardById, setCardById] = useState()
   const [loading, setLoading] = useState(false)
-  const navigate = useNavigate()
 
-  async function getCardById() {
+  const getCardById = useCallback(async () => {
     setLoading(true)
     const res = await getCard(id)
     setLoading(false)
     const data = await res.data.card
     setCardById(data)
-  }
-
-  const handleClick = () => {
-    navigate('/', { replace: true })
-  }
+  }, [id])
 
   useEffect(() => {
     getCardById()
-  }, [])
+  }, [getCardById])
 
   return (
     <div>
       {!loading ? (
         <div>
-          <button onClick={handleClick} className="return-button">
-            <FaLongArrowAltLeft id="return-icon" />
-          </button>
+          <Link to="/" className="return-button">
+            <IoMdArrowBack id="return-icon" />
+          </Link>
 
           <div className="titles">
             <h3 id="card-name">{cardById?.name}</h3>

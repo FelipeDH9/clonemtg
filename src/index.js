@@ -1,16 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
+// styles
+import './styles/global.css'
+
+// pages
 import Home from './Pages/Home'
 import Card from './Pages/Card'
 import LifeCount from './Pages/LifeCount'
+
+// components
 import LayoutComponent from './components/Layout'
-import './styles/global.css'
+import Navbar from './components/Navbar'
+
+// router
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Router>
+      <Navbar />
       <LayoutComponent>
         <Routes>
           <Route path="/" exact element={<Home />} />

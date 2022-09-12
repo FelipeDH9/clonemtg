@@ -11,7 +11,6 @@ import Loading from '../../components/Loading'
 // hooks
 import { useState, useEffect } from 'react'
 import useWindowDimensions from '../../hooks/useWindowResize'
-// import { FaSearch } from 'react-icons/fa'
 
 function Home() {
   const [currentCards, setCurrentCards] = useState()
@@ -55,8 +54,6 @@ function Home() {
   return (
     <div className="body-home">
       <h3>Pesquisa</h3>
-
-      {/* search input */}
       <div className="search">
         <form onSubmit={handleSubmit}>
           <input
@@ -67,7 +64,16 @@ function Home() {
             onChange={value => setCardName(value.target.value)}
           ></input>
           <div className="button-wrapper">
-            <input type="submit" value="Buscar" className="button" />
+            {loading ? (
+              <input
+                type="submit"
+                value="Aguarde"
+                disabled
+                className="button"
+              />
+            ) : (
+              <input type="submit" value="Buscar" className="button" />
+            )}
           </div>
         </form>
       </div>
@@ -140,7 +146,6 @@ function Home() {
           </tbody>
         </table>
       )}
-
       {currentCards && (
         <ReactPaginate
           breakLabel="..."
