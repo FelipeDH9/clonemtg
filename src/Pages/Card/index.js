@@ -65,7 +65,7 @@ function Card() {
                     )}
                   </div>
                 </div>
-                <p>{cardById?.setName}</p>
+                {/* <p>{cardById?.setName}</p> */}
 
                 <div className="artist">
                   #{cardById?.number} Illustrated by {cardById?.artist}
