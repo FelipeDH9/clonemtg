@@ -1,35 +1,32 @@
 /* RETURN BUTTON */
-.return-button{
-  background: var(--backgroud-color);
+#return-icon{
   color: rgb(255, 255, 255);
-  border: 1px solid var(--backgroud-color);
-  cursor: pointer;
+  font-size: 2.5rem;
+  margin-right: 1rem;
 }
 
-.return-button #return-icon{
-  font-size: 2rem;
-}
-
-.return-button #return-icon:hover{
+#return-icon:hover{
   color: rgb(118, 74, 241);
 }
 
 /* CARD NAME AND SET */
+h3{
+  word-break: break-word;
+}
 .titles{
   display: flex;
   align-items: center;
-  margin-bottom: 33.36px;
+  margin: 33.36px 0;
 }
 
 .titles h3{
-margin-right: 16px;
-font-size: 1.8rem;
-color: rgb(255, 255, 255);
+  margin-right: 16px;
+  font-size: 1.8rem;
+  color: rgb(255, 255, 255);
 }
 
-.titles h3:nth-child(2){
-  margin-left: 16px;
-  font-size: 20px;
+.titles h3:nth-child(3){
+  font-size: 1.6rem;
 }
 
 /* CARD FIELD*/
@@ -152,7 +149,11 @@ color: rgb(255, 255, 255);
     max-width: 100%;
   }
 
-  .titles {
+  .titles{
+    margin: 1.2rem 0;
+  }
+
+  .titles h3:nth-child(3){
     content: "";
     width: 0;
     height: 0;
@@ -163,6 +164,7 @@ color: rgb(255, 255, 255);
     opacity: 0;
     visibility: hidden;
   }
+  
   .card-image-butons {
     margin-right: 0;
     display: flex;

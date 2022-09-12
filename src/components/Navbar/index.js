@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import useWindowDimensions from '../../hooks/useWindowResize'
 
 // logo
-import PlaneCardsLogo from '../../assets/logos/PlaneCardsLogo.png'
+// import PlaneCardsLogo from '../../assets/logos/PlaneCardsLogo.png'
 
 // icons
 import { BiSearchAlt } from 'react-icons/bi'
@@ -17,22 +17,22 @@ const Navbar = () => {
     <header>
       <nav className="header">
         <Link to="/">
-          <img src={PlaneCardsLogo} alt="logo" />
+          <img src="/PlaneCardsLogo.png" alt="logo" />
         </Link>
         {width <= 767 ? (
-          <>
+          <div>
             <Link to="/">
               <BiSearchAlt className="searchIcon" />
             </Link>
             <Link to="/lifecount">
               <FaDiceD20 className="diceIcon" />
             </Link>
-          </>
+          </div>
         ) : (
-          <>
+          <div>
             <Link to="/">Buscar cartas</Link>
             <Link to="/lifecount">Marcador de vidas</Link>
-          </>
+          </div>
         )}
       </nav>
     </header>

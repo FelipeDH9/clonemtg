@@ -36,11 +36,10 @@ function Card() {
     <div>
       {!loading ? (
         <div>
-          <Link to="/" className="return-button">
-            <IoMdArrowBack id="return-icon" />
-          </Link>
-
           <div className="titles">
+            <Link to="/">
+              <IoMdArrowBack id="return-icon" />
+            </Link>
             <h3 id="card-name">{cardById?.name}</h3>
             <h3>{cardById?.setName}</h3>
           </div>
@@ -66,6 +65,8 @@ function Card() {
                     )}
                   </div>
                 </div>
+                <p>{cardById.setName}</p>
+
                 <div className="artist">
                   #{cardById?.number} Illustrated by {cardById?.artist}
                 </div>
