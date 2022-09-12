@@ -1,9 +1,8 @@
-<a href='https://planecards.vercel.app/'><img src='https://github.com/FelipeDH9/planecards/blob/main/src/assets/logos/planeCardsLogo.png'></a>
+<a href='https://planecards.vercel.app/'><img src='https://github.com/FelipeDH9/planecards/blob/main/public/PlaneCardsLogo.png'></a>
 
 This is my first React project, the PlaneCards.
 
 It's an application for <a href="https://magic.wizards.com/pt-BR">Magic: The Gathering</a> players, with three pages, one for search cards by name and creating a table with the results, the second contains all details about the selected card, and the third is a life counter with the history of changes.
-
 
 ## Technologies used:
 
