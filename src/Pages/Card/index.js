@@ -65,7 +65,7 @@ function Card() {
                     )}
                   </div>
                 </div>
-                <p>{cardById.setName}</p>
+                <p>{cardById?.setName}</p>
 
                 <div className="artist">
                   #{cardById?.number} Illustrated by {cardById?.artist}
@@ -77,7 +77,7 @@ function Card() {
                       {cardById?.rulings.map((rule, i) => {
                         return (
                           <p className="rule" key={i}>
-                            - {rule.text}
+                            - {rule?.text}
                           </p>
                         )
                       })}
