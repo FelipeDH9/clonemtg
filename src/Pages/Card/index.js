@@ -41,7 +41,7 @@ function Card() {
               <IoMdArrowBack id="return-icon" />
             </Link>
             <h3 id="card-name">{cardById?.name}</h3>
-            <h3>{cardById?.setName}</h3>
+            {/* <h3>{cardById?.setName}</h3> */}
           </div>
           <div className="card-info">
             <div className="card-image-butons">
@@ -54,6 +54,10 @@ function Card() {
                   <span>{cardById?.manaCost}</span>
                 </div>
                 <p>{cardById?.type}</p>
+                <p>
+                  {cardById?.setName} - {cardById?.set}
+                </p>
+
                 <p>{cardById?.text}</p>
                 <div className="rarity-power">
                   <div>{cardById?.rarity}</div>
@@ -65,7 +69,6 @@ function Card() {
                     )}
                   </div>
                 </div>
-                {/* <p>{cardById?.setName}</p> */}
 
                 <div className="artist">
                   #{cardById?.number} Illustrated by {cardById?.artist}

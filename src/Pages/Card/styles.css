@@ -25,9 +25,6 @@ h3{
   color: rgb(255, 255, 255);
 }
 
-.titles h3:nth-child(3){
-  font-size: 1.6rem;
-}
 
 /* CARD FIELD*/
 .card-info{
@@ -153,18 +150,6 @@ h3{
     margin: 1.2rem 0;
   }
 
-  .titles h3:nth-child(3){
-    content: "";
-    width: 0;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-    font-size: 0;
-    opacity: 0;
-    visibility: hidden;
-  }
-  
   .card-image-butons {
     margin-right: 0;
     display: flex;
