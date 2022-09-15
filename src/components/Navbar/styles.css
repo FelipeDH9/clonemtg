@@ -50,5 +50,12 @@ nav a:hover{
 @media (max-width: 767px){
   nav img{
     margin-right: 0rem;
+    /* height: 2.5rem; */
+  }
+}
+
+@media (max-width: 500px){
+  nav img{
+    height: 2.5rem;
   }
 }
