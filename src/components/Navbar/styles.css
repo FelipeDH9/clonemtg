@@ -29,24 +29,26 @@ nav a:nth-child(1){
 }
 
 nav a:hover{
-  color: rgba(255, 255, 255, 0.705);
-  text-decoration: underline;
+  color: rgb(34, 34, 34);
 }
 
-.searchIcon{
+.search-icon{
   font-size: 2rem;
   color: #fff;
   margin-right: 1rem;
 }
 
-.diceIcon{
+.dice-icon{
   font-size: 2rem;
   color: #fff;
 }
 
+.active{
+  color: rgb(34, 34, 34);
+}
+
 @media (max-width: 767px){
-  nav a:nth-child(1){
+  nav img{
     margin-right: 0rem;
   }
-  
 }

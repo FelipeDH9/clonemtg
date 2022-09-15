@@ -1,4 +1,4 @@
-<a href='https://planecards.vercel.app/'><img src='https://github.com/FelipeDH9/planecards/blob/main/public/PlaneCardsLogo.png'></a>
+<a href='https://planecards.vercel.app/'><img src='https://github.com/FelipeDH9/planecards/blob/main/public/dark_logo.png'></a>
 
 This is my first React project, the PlaneCards.
 

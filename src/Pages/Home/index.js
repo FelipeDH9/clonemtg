@@ -4,6 +4,7 @@ import './styles.css'
 import { getCards } from '../../services/magic/index'
 
 import ReactPaginate from 'react-paginate'
+import { Link } from 'react-router-dom'
 
 // components
 import Loading from '../../components/Loading'
@@ -84,13 +85,13 @@ function Home() {
           {!loading ? (
             <div className="flex-wrapper">
               {currentCards?.map(card => (
-                <a href={`/card/${card.id}`} key={card.id}>
+                <Link to={`/card/${card.id}`} key={card.id}>
                   <img
                     src={card.imageUrl}
                     alt="card"
                     className="card-image"
                   ></img>
-                </a>
+                </Link>
               ))}
             </div>
           ) : (
@@ -115,14 +116,14 @@ function Home() {
                 <tr key={card.id}>
                   <td className="card-name">
                     {card.imageUrl ? (
-                      <a href={`/card/${card.id}`} className="tooltip">
+                      <Link to={`/card/${card.id}`} className="tooltip">
                         {card.name}
                         <img
                           className="tooltipimage"
                           src={card.imageUrl}
                           alt="card"
                         ></img>
-                      </a>
+                      </Link>
                     ) : (
                       <p>{card.name}</p>
                     )}
@@ -159,7 +160,7 @@ function Home() {
           pageLinkClassName="page-num"
           previousLinkClassName="page-num"
           nextLinkClassName="page-num"
-          activeLinkClassName="active"
+          activeLinkClassName="pag-active"
         />
       )}
     </div>

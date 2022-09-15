@@ -1,10 +1,7 @@
 import './styles.css'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 import useWindowDimensions from '../../hooks/useWindowResize'
-
-// logo
-// import PlaneCardsLogo from '../../assets/logos/PlaneCardsLogo.png'
 
 // icons
 import { BiSearchAlt } from 'react-icons/bi'
@@ -17,21 +14,29 @@ const Navbar = () => {
     <header>
       <nav className="header">
         <Link to="/">
-          <img src="/PlaneCardsLogo.png" alt="logo" />
+          <img src="/logo.png" alt="logo" />
         </Link>
         {width <= 767 ? (
           <div>
-            <Link to="/">
-              <BiSearchAlt className="searchIcon" />
-            </Link>
-            <Link to="/lifecount">
-              <FaDiceD20 className="diceIcon" />
-            </Link>
+            <NavLink to="/">
+              <BiSearchAlt
+                className={({ isActive }) =>
+                  isActive ? 'active search-icon' : 'search-icon'
+                }
+              />
+            </NavLink>
+            <NavLink to="/lifecount">
+              <FaDiceD20
+                className={({ isActive }) =>
+                  isActive ? 'active dice-icon' : 'dice-icon'
+                }
+              />
+            </NavLink>
           </div>
         ) : (
           <div>
-            <Link to="/">Buscar cartas</Link>
-            <Link to="/lifecount">Marcador de vidas</Link>
+            <NavLink to="/">Buscar cartas</NavLink>
+            <NavLink to="/lifecount">Marcador de vidas</NavLink>
           </div>
         )}
       </nav>
