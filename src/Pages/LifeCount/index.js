@@ -34,8 +34,8 @@ function LifeCount() {
         <div className="life-register">
           <table className="life-table">
             <tbody>
-              {hisRegister?.map(e => (
-                <tr>
+              {hisRegister?.map((e, i) => (
+                <tr key={i}>
                   <td>
                     {e.value >= 0 ? (
                       <p style={{ color: '#8af34d' }}>+{e.value}</p>
@@ -102,8 +102,8 @@ function LifeCount() {
         <div className="life-register">
           <table className="life-table">
             <tbody>
-              {myRegister?.map(e => (
-                <tr>
+              {myRegister?.map((e, i) => (
+                <tr key={i}>
                   <td>
                     {e.value >= 0 ? (
                       <p style={{ color: '#8af34d' }}>+{e.value}</p>
