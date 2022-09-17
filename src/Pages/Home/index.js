@@ -10,16 +10,18 @@ import { Link } from 'react-router-dom'
 import Loading from '../../components/Loading'
 
 // hooks
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import useWindowDimensions from '../../hooks/useWindowResize'
+import { SearchContext } from '../../context/SearchContext'
 
 function Home() {
   const [currentCards, setCurrentCards] = useState()
-  const [cardName, setCardName] = useState()
   const { width } = useWindowDimensions()
   const [loading, setLoading] = useState(false)
   const [pageCount, setPageCount] = useState(0)
   const pageSize = 24
+
+  const { cardName, setCardName } = useContext(SearchContext)
 
   const fetchData = async (currentPage = 1) => {
     setLoading(true)
