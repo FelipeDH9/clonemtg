@@ -8,7 +8,8 @@ function LifeCount() {
   const [hisLife, setHisLife] = useState(20)
   const [hisRegister, setHisRegister] = useState([20])
 
-  const [stormCount, setStormCount] = useState(0)
+  // const [stormCount, setStormCount] = useState(0)
+  const [hisName, setHisName] = useState('Ele')
 
   function handleMyLife(value) {
     const myNewLife = parseInt(myLife) + parseInt(value)
@@ -26,6 +27,14 @@ function LifeCount() {
     setHisRegister(e => [...e, { hisOldLife, value, hisNewLife }])
 
     setHisLife(eval(hisNewLife))
+  }
+
+  const zeroStates = () => {
+    setHisLife(20)
+    setMyRegister([])
+
+    setMyLife(20)
+    setHisRegister([])
   }
 
   return (
@@ -50,7 +59,10 @@ function LifeCount() {
           </table>
         </div>
         <div className="life-buttons">
-          <p className="life">{hisLife}</p>
+          <p className="name">Ele</p>
+          <p className="life" value={hisLife}>
+            {hisLife}
+          </p>
           <div className="buttons-wrapper">
             <button
               className="btnPlus1 btnPlus"
@@ -118,7 +130,11 @@ function LifeCount() {
           </table>
         </div>
         <div className="life-buttons">
-          <p className="life">{myLife}</p>
+          <p className="name">Eu</p>
+
+          <p className="life" value={myLife}>
+            {myLife}
+          </p>
           <div className="buttons-wrapper">
             <button
               className="btnPlus1 btnPlus"
@@ -165,7 +181,7 @@ function LifeCount() {
           </div>
         </div>
       </div>
-      <div className="storm-block">
+      {/* <div className="storm-block">
         <p>Storm </p>
         <button
           onClick={() => {
@@ -175,12 +191,18 @@ function LifeCount() {
           0
         </button>
         <p>{stormCount}</p>
+
         <button
           onClick={() => {
             setStormCount(stormCount + 1)
           }}
         >
           +1
+        </button>
+      </div> */}
+      <div className="center">
+        <button onClick={() => zeroStates()} className="reset">
+          Reset
         </button>
       </div>
     </div>
