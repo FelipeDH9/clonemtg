@@ -19,8 +19,8 @@ function LayoutComponent({ children }) {
       <div className="layout-bottom">
         <div className="layout-bottom-content">
           <div className="bottom-social">
+            <h3>Contacts</h3>
             <div className="bottom-icons">
-              <h3>Contato</h3>
               <a
                 href="https://github.com/FelipeDH9"
                 target="_blank"

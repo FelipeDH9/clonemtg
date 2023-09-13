@@ -56,13 +56,13 @@ function Home() {
 
   return (
     <div className="body-home">
-      <h3>Pesquisa</h3>
+      <h3>Search</h3>
       <div className="search">
         <form onSubmit={handleSubmit}>
           <input
             className="search-input"
-            type="text"
-            placeholder="Digite o nome da carta..."
+            type="search"
+            placeholder="Card name..."
             autoFocus="autofocus"
             onChange={value => setCardName(value.target.value)}
           ></input>
@@ -70,12 +70,12 @@ function Home() {
             {loading ? (
               <input
                 type="submit"
-                value="Aguarde"
+                value="Loading"
                 disabled
                 className="button"
               />
             ) : (
-              <input type="submit" value="Buscar" className="button" />
+              <input type="submit" value="Search" className="button" />
             )}
           </div>
         </form>

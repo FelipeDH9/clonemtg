@@ -35,8 +35,8 @@ const Navbar = () => {
           </div>
         ) : (
           <div>
-            <NavLink to="/">Buscar cartas</NavLink>
-            <NavLink to="/lifecount">Marcador de vidas</NavLink>
+            <NavLink to="/">Search Cards</NavLink>
+            <NavLink to="/lifecount">Life Counter</NavLink>
           </div>
         )}
       </nav>

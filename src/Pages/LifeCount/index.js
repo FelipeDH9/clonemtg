@@ -59,7 +59,7 @@ function LifeCount() {
           </table>
         </div>
         <div className="life-buttons">
-          <p className="name">Ele</p>
+          <p className="name">He</p>
           <p className="life" value={hisLife}>
             {hisLife}
           </p>
@@ -130,7 +130,7 @@ function LifeCount() {
           </table>
         </div>
         <div className="life-buttons">
-          <p className="name">Eu</p>
+          <p className="name">Me</p>
 
           <p className="life" value={myLife}>
             {myLife}

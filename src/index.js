@@ -29,7 +29,7 @@ root.render(
             <Route path="/" exact element={<Home />} />
             <Route path="/card/:id" element={<Card />} />
             <Route path="/lifecount" element={<LifeCount />} />
-            <Route path="*" element={<h1> não encontrado</h1>} />
+            <Route path="*" element={<h1> 404 Not found</h1>} />
           </Routes>
         </LayoutComponent>
       </SearchContextProvider>
