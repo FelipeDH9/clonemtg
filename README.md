@@ -33,5 +33,6 @@ The following words will respond with a lot of data, try the search page with on
   <li>Change the API used to another that provides cards prices and is order alphabetically </li>
   <li>Create a mobile app</li>
   <li>New header whit the name of the searched card</li>
+  <li>Use AJAX in search input</li>
   <li>Change form to a search type</li>
 </ul>
