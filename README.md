@@ -15,7 +15,7 @@ It's an application for <a href="https://magic.wizards.com/pt-BR">Magic: The Gat
   <li>Vercel</li>
 </ul>
 <h2><a href="https://planecards.vercel.app/">Try it out!!!</a></h2>
-The following words will respond with a lot of data, try the search page with one of them or be creative:
+The following words will respond with a lot of data, try the search page with one of them or try anyone you like:
 
 <ul>
   <li>bolt</li>
