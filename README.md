@@ -32,6 +32,6 @@ The following words will respond with a lot of data, try the search page with on
   <li>Create a advanced search, to search cards by other details, like edition, mana cost, color, types and so on</li>
   <li>Change the API used to another that provides cards prices and is order alphabetically </li>
   <li>Create a mobile app</li>
-  <li>New menu header whit the name of the searched card</li>
+  <li>New menu header with the name of the searched card</li>
   <li>Use AJAX in search cards form</li>
 </ul>
